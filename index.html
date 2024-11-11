@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitung Luas Ruang Bangun</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <h1>Ruang Bangun Segitiga</h1>
+
+<div class="tengah">
+  <div class="card">
+    <h1>Luas Ruang Bangun Segitiga</h1>
+    <div class="cardbody">
+
+      <form>
+        <label> Nilai Alas</label>
+          <input type="text" id="A">
+        <label>Nilai Tinggi</label>
+          <input type="text" id="T">
+      </form>
+      <div class="hsl" id="hasil">Hasil</div>
+    </div>
+     <div class="cardfooter">
+       <button class="btn1" onclick="hitung()">Hitung</button>
+     </div>
+   </div>
+  </div>
+
+<script>
+  function hitung(){
+  var a = document.getElementById("A").value
+  var t = document.getElementById("T").value
+  var luas = 1/2*a*t
+  var res = "Hitung Luas Segitiga<br> 1/2 X alasnya "  +a+ ", dan tingginya " +t+ " menjadi:<br>Luas = 1/2 X alas X tinggi<br> Luas =" +1/2+ " X " +a+ " X " +t+ "<br>Luas ="+luas
+  var at = Number(a) + parseFloat(t) 
+  document.getElementById("hasil").innerHTML=res
+
+  //console.log(res)
+  }
+</script>
+
+</body>
+</html>
